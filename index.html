@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julius Ingemann Breitenstein</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .project-link {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hover-image {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+          transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 10px 10px 0 rgb(0 0 0 / 0.1);
+        max-width: 300px;
+        max-height: 200px;
+        transform: translate(0, 0) scale(0.8) rotate(0deg);
+        object-fit: contain;
+      }
+
+      .hover-image-1 {
+        z-index: 3;
+      }
+      .hover-image-2 {
+        z-index: 2;
+      }
+      .hover-image-3 {
+        z-index: 1;
+      }
+
+      .project-link:hover .hover-image {
+        opacity: 1;
+      }
+
+      #controls-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        max-width: 300px;
+        z-index: 1000;
+      }
+
+      .control-group {
+        margin-bottom: 12px;
+      }
+
+      .control-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .control-group input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-base max-w-2xl mx-auto px-4 py-32">
+    <h1 class="mb-12 text-3xl font-semibold">Julius Ingemann Breitenstein</h1>
+
+    <p class="mb-4">
+      I'm an interaction designer. In 2021 I was hired as the founding designer
+      at
+      <span class="project-link">
+        <a href="https://teton.ai" class="text-lime-500 hover:underline"
+          >Teton ↗︎</a
+        >
+        <img
+          src="images/teton_app.webp"
+          alt="Teton interface"
+          class="hover-image hover-image-1"
+        />
+        <img
+          src="images/teton_hardware.jpg"
+          alt="Teton hardware"
+          class="hover-image hover-image-2"
+        />
+        <img
+          src="images/teton_ipad.webp"
+          alt="Teton iPad"
+          class="hover-image hover-image-3"
+        /> </span
+      >. Since then we've gone from pre-product, to being an essential tool for
+      carestaff across Europe.
+    </p>
+    <p class="mb-4">
+      At Teton, we're teaching computers to understand human activity in
+      healthcare spaces, transforming this into tools that give carestaff agency
+      in their work - like helping them to reduce falls by 83%. As the only
+      designer and co-product lead, I've shaped everything from our digital
+      products and branding to our industrial and service design. My ambition
+      was to create a computer vision tool that still preserved dignity and
+      privacy, right now this reflected in the increased work satisfaction we
+      see from staff using Teton.
+    </p>
+
+    <p class="mb-12">
+      Usually I've been a 'build for yourself' kind of designer, so at Teton I
+      had to find a way to make a product that was very much not for myself. The
+      best approach I've found is just to be out with the carestaff a lot. I'll
+      never end up being a nurse, but after 40 night shifts you get enough
+      empathy to channel the 'build for yourself' way of working.
+    </p>
+
+    <div class="mb-12">
+      <p class="mb-4 text-lg font-semibold">Previously:</p>
+      <div class="mb-8">
+        <p>
+          • Designed
+          <span class="project-link">
+            <a href="sproute.html" class="text-lime-500 hover:underline"
+              >Sproute</a
+            >
+            <img
+              src="images/sightseer_map.jpg"
+              alt="Sproute interface"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/sproute_cover_photo.png"
+              alt="Sproute characters"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/sproute_sketchbook.jpg"
+              alt="Sproute third view"
+              class="hover-image hover-image-3"
+            /> </span
+          >, a navigation app that mixes Street Fighter and Google Maps
+        </p>
+        <p>
+          • Studied at
+          <span class="project-link"
+            ><a href="https://ciid.dk" class="text-lime-500 hover:underline"
+              >CIID ↗︎</a
+            >
+            <img
+              src="images/bump_map.png"
+              alt="Bump map"
+              class="hover-image hover-image-3"
+            />
+            <img
+              src="images/mangolabs.jpeg"
+              alt="Mangolabs"
+              class="hover-image hover-image-3"
+            />
+            <img
+              src="images/AgencyAgency.jpg"
+              alt="Agency Agency"
+              class="hover-image hover-image-3"
+            />
+          </span>
+        </p>
+        <p>
+          • Helped Jakob Wagner to design
+          <span class="project-link">
+            <span class="hover:text-amber-500 cursor-pointer"
+              >B&O headphones</span
+            >
+            <img
+              src="images/jakob_beoplay.png"
+              alt="B&O headphones"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/jakob_beoplay2.png"
+              alt="B&O headphones"
+              class="hover-image hover-image-1"
+            /> </span
+          >,
+          <span class="project-link">
+            <span class="hover:text-amber-500 cursor-pointer">furniture</span>
+            <img
+              src="images/jakob_montana.png"
+              alt="B&O headphones"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/jakob_montana2.webp"
+              alt="B&O headphones"
+              class="hover-image hover-image-1"
+            />
+
+            , and</span
+          >
+          <span class="project-link">
+            <span class="hover:text-amber-500 cursor-pointer"
+              >healthtech hardware</span
+            >
+            <img
+              src="images/jakob_saninudge.jpg"
+              alt="B&O headphones"
+              class="hover-image hover-image-1"
+            />
+          </span>
+        </p>
+        <p>
+          • Designed the
+          <a href="unpaid_intern.html" class="text-lime-500 hover:underline"
+            >Unpaid Intern</a
+          >
+          a generative synthesiser for the industrial design process
+        </p>
+        <p>
+          • First class honors in product design from
+          <span class="project-link">
+            <a
+              href="https://www.arts.ac.uk/colleges/central-saint-martins"
+              class="text-lime-500 hover:underline"
+              >Central Saint Martins ↗︎</a
+            >
+            <img
+              src="images/csm_2.png"
+              alt="Central Saint Martins workshop"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/csm_3.png"
+              alt="Central Saint Martins studio"
+              class="hover-image hover-image-3"
+            />
+          </span>
+        </p>
+      </div>
+
+      <p class="mb-4 text-lg font-semibold">Some 'smaller' things:</p>
+
+      <div class="mb-8">
+        • a 70's style
+        <span class="project-link"
+          ><a href="letters_to_felix.html" class="text-lime-500 hover:underline"
+            >tv program</a
+          >
+          <img
+            src="images/letters_to_felix_title.png"
+            alt="Letters to Felix title"
+            class="hover-image hover-image-1"
+          />
+          <img
+            src="images/letters_to_felix_at_desk.png"
+            alt="Letters to Felix at desk"
+            class="hover-image hover-image-2"
+          />
+          <img
+            src="images/letters_to_felix_BTS.png"
+            alt="Letters to Felix behind the scenes"
+            class="hover-image hover-image-3"
+          />
+        </span>
+        about AR prototyping, made with a friend during an art residency in
+        Spokane
+        <br />
+        •
+        <a
+          href="https://x.com/Julius_Ingemann/status/1488986071031496708"
+          class="text-lime-500 hover:underline"
+          >Experiments with consumer 3d scanning</a
+        ><br />
+        •
+        <span class="project-link">
+          <a
+            href="https://gbg.florianporada.com/"
+            class="text-lime-500 hover:underline"
+            >Generative boardgames</a
+          >
+          <img
+            src="images/generative_boardgames_catalonia.png"
+            alt="Generative boardgames"
+            class="hover-image hover-image-1"
+          />
+          <img
+            src="images/generative_boardgames_bird_bible.png"
+            alt="Generative boardgames"
+            class="hover-image hover-image-2"
+          />
+          <img
+            src="images/generative_boardgames_taxReport.png"
+            alt="Generative boardgames"
+            class="hover-image hover-image-3"
+          />
+        </span>
+        , made with friends, using finetuned GPT2 and StyleGAN
+        <br />
+        • Helped my friends build
+        <span class="project-link">
+          <a
+            href="https://www.saga.dk/projects/lunark"
+            class="text-lime-500 hover:underline"
+            >LUNARK ↗︎</a
+          >
+          <img
+            src="images/lunark_built.webp"
+            alt="LUNARK built"
+            class="hover-image hover-image-1"
+          />
+          <img
+            src="images/lunark_preassembly.JPG"
+            alt="LUNARK preassembly"
+            class="hover-image hover-image-2"
+          />
+          <img
+            src="images/lunark_raining.JPG"
+            alt="LUNARK raining"
+            class="hover-image hover-image-3"
+          />
+        </span>
+        , a moonbase they lived in in greenland
+
+        <p>
+          • Wrote about design, technology, and art for
+          <span class="project-link">
+            <a
+              href="https://www.iconeye.com/opinion/shirley-baker-women-children-and-loitering-men"
+              class="text-lime-500 hover:underline"
+              >ICON magazine ↗︎
+            </a>
+            <img
+              src="images/icon_cover.webp"
+              alt="ICON magazine"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/icon_plastic.png"
+              alt="ICON plastic"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/icon_unplanned.png"
+              alt="ICON unplanned"
+              class="hover-image hover-image-3"
+            />
+          </span>
+        </p>
+        <p>
+          • Ran a small internet radio station out of my bedroom as a teenager
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <p class="mb-4 text-lg font-semibold">Writing:</p>
+        •
+        <a
+          href="https://www.teton.ai/blog/the-data-heist"
+          class="text-lime-500 hover:underline"
+          >Data heist ↗︎
+        </a>
+        <br />
+        •
+        <a href="" class="text-lime-500 hover:underline">3D Scanning post</a>
+      </div>
+
+      <div>
+        <p class="mb-4 text-lg font-semibold">Mentions:</p>
+        •
+        <a
+          href="https://www.fastcompany.com/90547959/mobility-innovation-by-design-2020"
+          class="text-lime-500 hover:underline"
+          >Winning 2020's Fast Co Design awards ↗︎</a
+        ><br />
+        •
+        <a
+          href="https://interconnected.org/home/2020/09/07/algorithms"
+          class="text-lime-500 hover:underline"
+          >Matt webb talking about Sproute ↗︎</a
+        ><br />
+        •
+        <a
+          href="https://www.designboom.com/design/hello-robot-design-between-human-and-machine-vitra-design-museum-09-27-2022/"
+          class="text-lime-500 hover:underline"
+          >Hello Robot Exhibition, which the Unpaid Intern was part of ↗︎</a
+        ><br />
+        •
+        <a
+          href="https://www.dezeen.com/2016/07/18/unpaid-intern-julius-breitenstein-central-saint-martins-graduate-device-aid-designers/"
+          class="text-lime-500 hover:underline"
+          >Dezeen talking about the Unpaid Intern ↗︎</a
+        >
+      </div>
+    </div>
+
+    <div id="controls-panel">
+      <div class="control-group">
+        <label>Base Scale: <span id="scaleValue">2</span></label>
+        <input
+          type="range"
+          id="scaleSlider"
+          min="1"
+          max="4"
+          step="0.1"
+          value="2"
+        />
+      </div>
+      <div class="control-group">
+        <label
+          >Landscape Distance:
+          <span id="landscapeDistanceValue">1.3</span></label
+        >
+        <input
+          type="range"
+          id="landscapeDistanceSlider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1.3"
+        />
+      </div>
+      <div class="control-group">
+        <label
+          >Portrait Distance: <span id="portraitDistanceValue">1</span></label
+        >
+        <input
+          type="range"
+          id="portraitDistanceSlider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+      </div>
+      <div class="control-group">
+        <label>Square Distance: <span id="squareDistanceValue">1</span></label>
+        <input
+          type="range"
+          id="squareDistanceSlider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+      </div>
+      <div class="control-group">
+        <label>Rotation Range: <span id="rotationValue">12</span>°</label>
+        <input
+          type="range"
+          id="rotationSlider"
+          min="0"
+          max="30"
+          step="1"
+          value="12"
+        />
+      </div>
+    </div>
+
+    <script>
+      const controls = {
+        scale: 2,
+        landscapeDistance: 1.3,
+        portraitDistance: 1,
+        squareDistance: 1,
+        rotation: 12,
+      };
+
+      document.getElementById("scaleSlider").addEventListener("input", (e) => {
+        controls.scale = parseFloat(e.target.value);
+        document.getElementById("scaleValue").textContent = controls.scale;
+      });
+
+      document
+        .getElementById("landscapeDistanceSlider")
+        .addEventListener("input", (e) => {
+          controls.landscapeDistance = parseFloat(e.target.value);
+          document.getElementById("landscapeDistanceValue").textContent =
+            controls.landscapeDistance;
+        });
+
+      document
+        .getElementById("portraitDistanceSlider")
+        .addEventListener("input", (e) => {
+          controls.portraitDistance = parseFloat(e.target.value);
+          document.getElementById("portraitDistanceValue").textContent =
+            controls.portraitDistance;
+        });
+
+      document
+        .getElementById("squareDistanceSlider")
+        .addEventListener("input", (e) => {
+          controls.squareDistance = parseFloat(e.target.value);
+          document.getElementById("squareDistanceValue").textContent =
+            controls.squareDistance;
+        });
+
+      document
+        .getElementById("rotationSlider")
+        .addEventListener("input", (e) => {
+          controls.rotation = parseFloat(e.target.value);
+          document.getElementById("rotationValue").textContent =
+            controls.rotation;
+        });
+
+      document.querySelectorAll(".project-link").forEach((link) => {
+        const images = link.querySelectorAll(".hover-image");
+        images.forEach((img) => {
+          img.onload = function () {
+            const aspectRatio = this.naturalWidth / this.naturalHeight;
+            img.dataset.imageType =
+              aspectRatio > 1.2
+                ? "landscape"
+                : aspectRatio < 0.8
+                ? "portrait"
+                : "square";
+
+            if (aspectRatio > 1.2) {
+              this.style.width = "120px";
+              this.style.height = "auto";
+            } else if (aspectRatio < 0.8) {
+              this.style.width = "75px";
+              this.style.height = "auto";
+            } else {
+              this.style.width = "100px";
+              this.style.height = "auto";
+            }
+          };
+        });
+
+        link.addEventListener("mouseenter", () => {
+          const images = link.querySelectorAll(".hover-image");
+          const linkRect = link.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+
+          images.forEach((img, index) => {
+            const imageType = img.dataset.imageType;
+            const distanceMultiplier =
+              imageType === "landscape"
+                ? controls.landscapeDistance
+                : imageType === "portrait"
+                ? controls.portraitDistance
+                : controls.squareDistance;
+
+            const zones = [
+              { x: -120 * distanceMultiplier, y: -150 * distanceMultiplier },
+              { x: 20 * distanceMultiplier, y: 100 * distanceMultiplier },
+              { x: 160 * distanceMultiplier, y: -100 * distanceMultiplier },
+            ];
+
+            const baseX = zones[index].x;
+            const distanceToTop = linkRect.top;
+            const distanceToBottom = viewportHeight - linkRect.bottom;
+
+            let baseY = zones[index].y;
+            if (distanceToTop < 150 && baseY < 0) {
+              baseY = Math.abs(baseY) * 1.2;
+            } else if (distanceToBottom < 150 && baseY > 0) {
+              baseY = -Math.abs(baseY) * 1.2;
+            }
+
+            const randomX = baseX + (Math.random() - 0.5) * 20;
+            const randomY = baseY + (Math.random() - 0.5) * 30;
+            const randomScale = controls.scale + Math.random() * 0.5;
+            const randomRotate = (Math.random() - 0.5) * controls.rotation;
+
+            img.style.transform = `
+              translate(${randomX}px, ${randomY}%) 
+              scale(${randomScale}) 
+              rotate(${randomRotate}deg)
+            `;
+            img.style.transitionDelay = `${index * 0.05}s`;
+          });
+        });
+
+        link.addEventListener("mouseleave", () => {
+          const images = link.querySelectorAll(".hover-image");
+          images.forEach((img) => {
+            img.style.transform = "translate(0, 0) scale(0.8) rotate(0deg)";
+            img.style.transitionDelay = "0s";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
