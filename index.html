@@ -39,6 +39,29 @@
         opacity: 1;
       }
 
+      /* Trigger line for mobile */
+      #trigger-line {
+        position: fixed;
+        left: 0;
+        right: 0;
+        /* We'll set the top value dynamically with JS */
+        height: 1px;
+        background-color: rgba(132, 204, 22, 0.4); /* Faded lime-600 color */
+        z-index: 1; /* Increased from -1 to make it visible during testing */
+        pointer-events: none;
+        width: 100%;
+        max-width: 2xl;
+        margin: 0 auto;
+      }
+
+      /* Class to be added to links when they intersect with the trigger line */
+      .trigger-active .hover-image {
+        opacity: 1;
+        /* Ensure transform properties are applied for mobile */
+        transform: translate(var(--hover-x, 0px), var(--hover-y, 0%))
+          scale(var(--hover-scale, 1)) rotate(var(--hover-rotate, 0deg)) !important;
+      }
+
       #controls-panel {
         position: fixed;
         bottom: 20px;
@@ -65,18 +88,44 @@
       .control-group input {
         width: 100%;
       }
+
+      /* Animated underline effect */
+      .animated-underline {
+        position: relative;
+      }
+
+      .animated-underline::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+        left: 0;
+        background-color: rgb(132, 204, 22); /* lime-600 color */
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-out;
+      }
+
+      .animated-underline:hover::after,
+      .trigger-active .animated-underline::after {
+        transform: scaleX(1);
+      }
     </style>
   </head>
-  <body class="font-sans text-base max-w-2xl mx-auto px-4 py-32">
+  <body class="font-sans text-base max-w-2xl mx-auto px-12 py-32">
+    <!-- Trigger line for mobile hover alternative -->
+    <div id="trigger-line"></div>
+
     <h1 class="text-2xl font-semibold">Julius Ingemann Breitenstein</h1>
-    <h2 class="mb-8 text-lg italic text-gray-500">
+    <h2 class="text-lg italic text-gray-500">
       Hardware and software interaction designer
     </h2>
 
-    <p class="mb-4">
+    <p class="mb-4 mt-8">
       In 2021 I was hired as the founding designer at
       <span class="project-link">
-        <a href="https://teton.ai" class="text-lime-600 hover:underline"
+        <a href="https://teton.ai" class="text-lime-600 animated-underline"
           >Teton ↗︎</a
         >
         <img
@@ -118,7 +167,7 @@
         <p>
           • Designed
           <span class="project-link">
-            <a href="sproute.html" class="text-lime-600 hover:underline"
+            <a href="sproute.html" class="text-lime-600 animated-underline"
               >Sproute</a
             >
             <img
@@ -141,7 +190,7 @@
         <p>
           • Studied at
           <span class="project-link"
-            ><a href="https://ciid.dk" class="text-lime-600 hover:underline"
+            ><a href="https://ciid.dk" class="text-lime-600 animated-underline"
               >CIID ↗︎</a
             >
             <img
@@ -166,7 +215,7 @@
           <span class="project-link">
             <a
               href="https://www.jakobwagner.dk/"
-              class="text-lime-600 hover:underline"
+              class="text-lime-600 animated-underline"
               >Jakob Wagner ↗︎</a
             >
 
@@ -191,7 +240,9 @@
         <p>
           • Designed the
           <span class="project-link">
-            <a href="unpaid_intern.html" class="text-lime-600 hover:underline"
+            <a
+              href="unpaid_intern.html"
+              class="text-lime-600 animated-underline"
               >Unpaid Intern</a
             >
             <img
@@ -217,7 +268,7 @@
           <span class="project-link">
             <a
               href="https://www.arts.ac.uk/colleges/central-saint-martins"
-              class="text-lime-600 hover:underline"
+              class="text-lime-600 animated-underline"
               >Central Saint Martins ↗︎</a
             >
             <img
@@ -239,7 +290,9 @@
       <div class="mb-8">
         • A 70's style
         <span class="project-link"
-          ><a href="letters_to_felix.html" class="text-lime-600 hover:underline"
+          ><a
+            href="letters_to_felix.html"
+            class="text-lime-600 animated-underline"
             >TV program</a
           >
           <img
@@ -263,14 +316,14 @@
         •
         <a
           href="https://x.com/Julius_Ingemann/status/1488986071031496708"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Experiments with consumer 3d scanning</a
         ><br />
         •
         <span class="project-link">
           <a
             href="https://gbg.florianporada.com/"
-            class="text-lime-600 hover:underline"
+            class="text-lime-600 animated-underline"
             >Generative boardgames</a
           >
           <img
@@ -295,7 +348,7 @@
         <span class="project-link">
           <a
             href="https://www.saga.dk/projects/lunark"
-            class="text-lime-600 hover:underline"
+            class="text-lime-600 animated-underline"
             >LUNARK ↗︎</a
           >
           <img
@@ -321,7 +374,7 @@
           <span class="project-link">
             <a
               href="https://www.iconeye.com/opinion/shirley-baker-women-children-and-loitering-men"
-              class="text-lime-600 hover:underline"
+              class="text-lime-600 animated-underline"
               >ICON magazine ↗︎
             </a>
             <img
@@ -351,12 +404,12 @@
         •
         <a
           href="https://www.teton.ai/blog/the-data-heist"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Data heist ↗︎
         </a>
         <br />
         •
-        <a href="" class="text-lime-600 hover:underline">3D Scanning post</a>
+        <a href="" class="text-lime-600 animated-underline">3D Scanning post</a>
       </div>
 
       <div class="mb-8">
@@ -364,25 +417,25 @@
         •
         <a
           href="https://www.fastcompany.com/90547959/mobility-innovation-by-design-2020"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Winning 2020 Fast Co Design Awards ↗︎</a
         ><br />
         •
         <a
           href="https://interconnected.org/home/2020/09/07/algorithms"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Matt webb ↗︎</a
         ><br />
         •
         <a
           href="https://www.designboom.com/design/hello-robot-design-between-human-and-machine-vitra-design-museum-09-27-2022/"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Hello Robot Exhibition ↗︎</a
         ><br />
         •
         <a
           href="https://www.dezeen.com/2016/07/18/unpaid-intern-julius-breitenstein-central-saint-martins-graduate-device-aid-designers/"
-          class="text-lime-600 hover:underline"
+          class="text-lime-600 animated-underline"
           >Dezeen ↗︎</a
         >
       </div>
@@ -392,14 +445,14 @@
         <p>
           <a
             href="mailto:julius.ingemann@gmail.com"
-            class="text-lime-600 hover:underline"
+            class="text-lime-600 animated-underline"
             >julius.ingemann@gmail.com</a
           >
         </p>
         <p>
           <a
             href="https://www.linkedin.com/in/juliusingemann/"
-            class="text-lime-600 hover:underline"
+            class="text-lime-600 animated-underline"
             >LinkedIn ↗︎</a
           >
         </p>
@@ -515,6 +568,7 @@
             controls.rotation;
         });
 
+      // Handle image hover effect for desktop/mouse users
       document.querySelectorAll(".project-link").forEach((link) => {
         const images = link.querySelectorAll(".hover-image");
         images.forEach((img) => {
@@ -541,58 +595,139 @@
         });
 
         link.addEventListener("mouseenter", () => {
-          const images = link.querySelectorAll(".hover-image");
-          const linkRect = link.getBoundingClientRect();
-          const viewportHeight = window.innerHeight;
-
-          images.forEach((img, index) => {
-            const imageType = img.dataset.imageType;
-            const distanceMultiplier =
-              imageType === "landscape"
-                ? controls.landscapeDistance
-                : imageType === "portrait"
-                ? controls.portraitDistance
-                : controls.squareDistance;
-
-            const zones = [
-              { x: -120 * distanceMultiplier, y: -150 * distanceMultiplier },
-              { x: 20 * distanceMultiplier, y: 100 * distanceMultiplier },
-              { x: 160 * distanceMultiplier, y: -100 * distanceMultiplier },
-            ];
-
-            const baseX = zones[index].x;
-            const distanceToTop = linkRect.top;
-            const distanceToBottom = viewportHeight - linkRect.bottom;
-
-            let baseY = zones[index].y;
-            if (distanceToTop < 150 && baseY < 0) {
-              baseY = Math.abs(baseY) * 1.2;
-            } else if (distanceToBottom < 150 && baseY > 0) {
-              baseY = -Math.abs(baseY) * 1.2;
-            }
-
-            const randomX = baseX + (Math.random() - 0.5) * 20;
-            const randomY = baseY + (Math.random() - 0.5) * 30;
-            const randomScale = controls.scale + Math.random() * 0.2;
-            const randomRotate = (Math.random() - 0.5) * controls.rotation;
-
-            img.style.transform = `
-              translate(${randomX}px, ${randomY}%) 
-              scale(${randomScale}) 
-              rotate(${randomRotate}deg)
-            `;
-            img.style.transitionDelay = `${index * 0.05}s`;
-          });
+          applyHoverEffect(link);
         });
 
         link.addEventListener("mouseleave", () => {
-          const images = link.querySelectorAll(".hover-image");
-          images.forEach((img) => {
-            img.style.transform = "translate(0, 0) scale(0.8) rotate(0deg)";
-            img.style.transitionDelay = "0s";
-          });
+          removeHoverEffect(link);
         });
       });
+
+      // Function to apply the hover effect animation
+      function applyHoverEffect(link) {
+        const images = link.querySelectorAll(".hover-image");
+        const linkRect = link.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        images.forEach((img, index) => {
+          const imageType = img.dataset.imageType;
+          const distanceMultiplier =
+            imageType === "landscape"
+              ? controls.landscapeDistance
+              : imageType === "portrait"
+              ? controls.portraitDistance
+              : controls.squareDistance;
+
+          const zones = [
+            { x: -120 * distanceMultiplier, y: -150 * distanceMultiplier },
+            { x: 20 * distanceMultiplier, y: 100 * distanceMultiplier },
+            { x: 160 * distanceMultiplier, y: -100 * distanceMultiplier },
+          ];
+
+          const baseX = zones[index].x;
+          const distanceToTop = linkRect.top;
+          const distanceToBottom = viewportHeight - linkRect.bottom;
+
+          let baseY = zones[index].y;
+          if (distanceToTop < 150 && baseY < 0) {
+            baseY = Math.abs(baseY) * 1.2;
+          } else if (distanceToBottom < 150 && baseY > 0) {
+            baseY = -Math.abs(baseY) * 1.2;
+          }
+
+          const randomX = baseX + (Math.random() - 0.5) * 20;
+          const randomY = baseY + (Math.random() - 0.5) * 30;
+          const randomScale = controls.scale + Math.random() * 0.2;
+          const randomRotate = (Math.random() - 0.5) * controls.rotation;
+
+          // Set CSS variables for use with .trigger-active class
+          img.style.setProperty("--hover-x", `${randomX}px`);
+          img.style.setProperty("--hover-y", `${randomY}%`);
+          img.style.setProperty("--hover-scale", `${randomScale}`);
+          img.style.setProperty("--hover-rotate", `${randomRotate}deg`);
+
+          img.style.transform = `
+            translate(${randomX}px, ${randomY}%) 
+            scale(${randomScale}) 
+            rotate(${randomRotate}deg)
+          `;
+          img.style.transitionDelay = `${index * 0.05}s`;
+        });
+      }
+
+      // Function to remove hover effect
+      function removeHoverEffect(link) {
+        const images = link.querySelectorAll(".hover-image");
+        images.forEach((img) => {
+          img.style.transform = "translate(0, 0) scale(0.8) rotate(0deg)";
+          img.style.transitionDelay = "0s";
+        });
+      }
+
+      // Trigger line intersection detection
+      const triggerLine = document.getElementById("trigger-line");
+      const projectLinks = document.querySelectorAll(".project-link");
+      let activeLink = null;
+      let triggerLineY = 0; // We'll calculate this dynamically
+
+      // Position the trigger line below the subtitle
+      function positionTriggerLine() {
+        const subtitle = document.querySelector("h2");
+        if (subtitle) {
+          const subtitleRect = subtitle.getBoundingClientRect();
+          const subtitleBottom = subtitleRect.bottom;
+          // Add a small offset (20px) below the subtitle
+          triggerLineY = subtitleBottom + 5;
+          triggerLine.style.top = `${triggerLineY}px`;
+        }
+      }
+
+      // Call this on load and resize
+      window.addEventListener("load", positionTriggerLine);
+      window.addEventListener("resize", positionTriggerLine);
+
+      // Check for intersections on scroll
+      window.addEventListener("scroll", checkIntersections);
+
+      // Add touch events for mobile
+      window.addEventListener("touchstart", checkIntersections);
+      window.addEventListener("touchmove", checkIntersections);
+      window.addEventListener("touchend", checkIntersections);
+
+      // Initial check
+      window.addEventListener("load", checkIntersections);
+
+      function checkIntersections() {
+        // We now use the dynamically calculated triggerLineY
+        // No need to hardcode 190px anymore
+
+        projectLinks.forEach((link) => {
+          const rect = link.getBoundingClientRect();
+          const linkMiddleY = rect.top + rect.height / 2;
+
+          // Check if link intersects with trigger line
+          // Increased tolerance for mobile (from 20px to 30px)
+          const intersects = Math.abs(linkMiddleY - triggerLineY) < 30;
+
+          if (intersects && link !== activeLink) {
+            // Deactivate previous link if there is one
+            if (activeLink) {
+              activeLink.classList.remove("trigger-active");
+              removeHoverEffect(activeLink);
+            }
+
+            // Activate new link
+            link.classList.add("trigger-active");
+            applyHoverEffect(link);
+            activeLink = link;
+          } else if (!intersects && link === activeLink) {
+            // Deactivate if no longer intersecting
+            link.classList.remove("trigger-active");
+            removeHoverEffect(link);
+            activeLink = null;
+          }
+        });
+      }
     </script>
   </body>
 </html>
