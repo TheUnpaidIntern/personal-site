@@ -4,52 +4,159 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unpaid Intern - Julius Ingemann Breitenstein</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* You can add custom styles here */
-    </style>
   </head>
-  <body class="font-sans text-base max-w-2xl mx-auto px-4 py-32">
-    <p class="mb-12">
-      <a href="index.html" class="underline hover:no-underline">← back</a>
-    </p>
+  <body class="font-sans text-base bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-12 md:py-24">
+      <p class="mb-8">
+        <a href="index.html" class="text-lime-600 animated-underline">← Back</a>
+      </p>
 
-    <h1 class="mb-12 text-3xl font-semibold">Unpaid Intern</h1>
+      <div class="flex flex-col mb-8">
+        <h1 class="text-2xl font-semibold">The Unpaid Intern - 2015</h1>
+        <h2 class="text-lg italic text-gray-500">
+          A synthesiser for the industrial design process
+        </h2>
+      </div>
 
-    <h2 class="mb-4 text-2xl font-semibold">
-      A synthesiser for the industrial design process
-    </h2>
-    <p class="mb-12">
-      The Unpaid Intern was my graduation project at CSM in 2015 - imagine a
-      synthesizer for 3D models. Drop in any CAD file and explore the design
-      space through intuitive controls, just like a musician shaping sound. The
-      interface lets you save presets and collaborate naturally, without
-      everyone needing to huddle around a computer. Say your team wants to
-      capture the feeling of midwest emo in product form - you can use the tool
-      to explore what details make something feel like Never Meant by American
-      Football. Save that direction as a preset, amplify those characteristics
-      or tone them down, blend it with post-punk influences, then hand the
-      controls to your colleagues to explore further without needing CAD
-      expertise. Like working with a helpful intern, it takes your vague
-      creative direction and returns with countless variations, ready for
-      feedback and refinement. While most AI tools at the time were trying to
-      take over the entire creative process, I wanted to explore how algorithms
-      could enhance rather than replace traditional design workflows.
-    </p>
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Main content column -->
+        <div class="flex flex-col md:w-1/2 gap-6">
+          <!-- YouTube video for desktop and mobile -->
+          <div class="w-full aspect-video mb-4">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/feswsZA6axU"
+              title="The Unpaid Intern"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
 
-    <p class="mb-12">
-      This project opened up a path I hadn't expected. Back in 2015, I was
-      focused on industrial design - dreaming about working at places like
-      Barber Osgerby. But when everyone started calling this an 'interaction
-      design' project, I figured I should probably learn what that meant.
-      Looking at what was coming out of the RCA at the time, especially through
-      Durrell Bishop's influence, I realized that was exactly the direction I
-      needed to go. While I had these ideas about generative tools and AI
-      augmentation, I barely knew how to prototype them - coding wasn't
-      something I'd really explored. The concept of collaborating with AI wasn't
-      new even then, but it's evolved enormously since 2015. Looking back, this
-      project started me down a rabbit hole of exploring human-AI collaboration
-      in design, one that I'm still following today.
-    </p>
+          <!-- First two paragraphs -->
+          <p>
+            Drop in your CAD files and explore the latent space of your
+            concepts. The controller works as a way for the algorithm to live on
+            the table amongst the sketches and models.
+          </p>
+          <p>
+            The interface lets you save presets and collaborate naturally,
+            without everyone needing to huddle around a computer. Say your
+            client wants to 'make it more jazzy' - you can quickly explore what
+            details make something feel jazzy. When you find it, you can save
+            that direction as a preset, amplify those characteristics or tone
+            them down, maybe blend in some post-punk influences, let the client
+            use the dials to fade between Miles Davis and Moses Boyd. In this
+            case you're not only exploring you're working on finding a shared
+            language to work in.
+          </p>
+
+          <!-- Show the first image on mobile only between paragraphs -->
+          <div class="md:hidden w-full mb-4">
+            <img
+              src="images/UnpaidIntern-Hardware.png"
+              alt="The Unpaid Intern hardware interface"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <!-- Third paragraph -->
+          <p>
+            In the summer before working on this I had been working as an
+            unpaid<sup class="font-bold font-size-sm pl-[2px]">1</sup>
+            editorial intern for ICON magazine writing first drafts and
+            exploring topics for the editors. This is kind of the same, it'll
+            take your vague creative direction and returns with countless
+            variations, ready for feedback and refinement.
+          </p>
+
+          <!-- Show the second image on mobile only between paragraphs -->
+          <div class="md:hidden w-full mb-4">
+            <img
+              src="images/UnpaidIntern_evolution.png"
+              alt="Diagram showing the evolution process"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <!-- Fourth paragraph -->
+          <p>
+            Or at least that was the concept, the Unpaid Intern was my
+            graduation project at Central Saint Martins in 2015 - and the first
+            sign that I should move from industrial design to interaction
+            design. I had these ideas about generative tools and AI
+            augmentation<sup class="font-bold font-size-sm pl-[2px]">2</sup>, I
+            barely knew how to prototype them - software and electronics were
+            all peripheral to what I had been focussed on. But teaching myself
+            to prototype them set me down the path I'm on today.
+          </p>
+
+          <!-- Show the third image on mobile only between paragraphs -->
+          <div class="md:hidden w-full mb-4">
+            <img
+              src="images/UnpaidIntern_In_use.png"
+              alt="The Unpaid Intern in use"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <!-- Fifth paragraph -->
+          <p>
+            The project took on a life of its own after graduation, becoming
+            part of the Vitra Design Museum's 'Hello Robot' exhibition on the
+            past present and future of our relationship with robots. It ended up
+            travelling around the world from 2017 until 2023. And it was fun to
+            see it be part of that larger conversation about how we relate to
+            AI, especially as the hype started growing.
+          </p>
+          <div class="md:hidden w-full mb-4">
+            <img
+              src="images/UnpaidIntern-Feedback_Loop.png"
+              alt="The Unpaid Intern feedback loop"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <!-- Footnotes -->
+          <ol class="list-decimal pl-5 mt-6 text-sm text-gray-600">
+            <li>In all fairness they did pay for my zone 5 travelcard.</li>
+            <li>
+              There was AI in the air at Kings Cross back then, Deepmind was the
+              first of the Google companies to move in to that campus, and they
+              were hard at work prepping for the Lee Sedol match the following
+              spring. I hand-made an invite to our degree show and to try get
+              Demis to come to my degree show.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Images column (desktop only) -->
+        <div class="hidden md:flex md:w-1/2 flex-col gap-6">
+          <img
+            src="images/UnpaidIntern-Hardware.png"
+            alt="The Unpaid Intern hardware interface"
+            class="w-full rounded-md"
+          />
+          <img
+            src="images/UnpaidIntern-Feedback_Loop.png"
+            alt="The Unpaid Intern feedback loop"
+            class="w-full rounded-md"
+          />
+          <img
+            src="images/UnpaidIntern_evolution.png"
+            alt="Diagram showing the evolution process"
+            class="w-full rounded-md"
+          />
+          <img
+            src="images/UnpaidIntern_In_use.png"
+            alt="The Unpaid Intern in use"
+            class="w-full rounded-md"
+          />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
