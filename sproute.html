@@ -7,250 +7,380 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-sans text-base max-w-2xl mx-auto px-4 py-32">
-    <p class="mb-12">
-      <a href="index.html" class="underline hover:no-underline">← back</a>
-    </p>
-    <img
-      src="images/sproute_cover_photo.png"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
+  <body class="font-sans text-base bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-12 md:py-24">
+      <!-- Main content area with consistent width -->
+      <div class="flex justify-center">
+        <!-- Main text column -->
+        <div class="flex flex-col w-full max-w-2xl gap-4">
+          <p class="mb-8">
+            <a href="index.html" class="text-lime-600 animated-underline"
+              >← Back</a
+            >
+          </p>
 
-    <h1 class="mb-12 text-base font-normal">Sproute</h1>
+          <div class="flex flex-col mb-2">
+            <h1 class="text-2xl font-semibold">Sproute - 2019</h1>
+            <h2 class="text-lg italic text-gray-500">
+              A navigation app that diversifies how you travel
+            </h2>
+          </div>
+          <img
+            src="images/sproute_cover_photo.png"
+            alt="Sproute app cover photo"
+            class="w-full"
+          />
 
-    <h2 class="mb-4 text-2xl font-semibold">
-      Sproute is a navigation app that diversifies how you travel by offering a
-      set of characters that get you to your destination in different ways. For
-      example maybe you want to avoid dark and unlit streets at night, or maybe
-      you could go sightseeing on the way to your destination?
-    </h2>
+          <p class="leading-snug font-light">
+            Sproute is a navigation app that diversifies how you travel by
+            offering a set of characters that get you to your destination in
+            different ways. For example maybe you want to avoid dark and unlit
+            streets at night, or maybe you could go sightseeing on the way to
+            your destination?
+          </p>
 
-    <p class="mb-12">
-      Sproute was the outcome of my 4 month residency with Move Lab: an urban
-      mobility lab based in Berlin. Particular thanks goes to Florian Porada who
-      was the developer on the project and translated my design into a working
-      app. The lab also have a project page for Sproute, and a couple of blog
-      posts which I recommend checking out.
-    </p>
+          <p class="mb-8 leading-snug font-light">
+            Sproute was the outcome of my 4 month residency with Move Lab: an
+            urban mobility lab based in Berlin. Particular shout out Florian
+            Porada, the lab's developer, who worked with me on making the idea a
+            reality.
+          </p>
 
-    <h2 class="mb-4 text-2xl font-semibold">Meet the team</h2>
+          <h2 class="text-2xl font-semibold">Meet the team</h2>
+          <p class="mb-8 leading-snug font-light">
+            This initial ensemble of characters were chosen to appeal to
+            different facets of a person's needs, and also to exemplify the
+            scope of potential future characters: from precise functionality, to
+            open-ended exploration.
+          </p>
 
-    <p class="mb-12">
-      This initial ensemble of characters were chosen to appeal to different
-      facets of a person's needs, and also to exemplify the scope of potential
-      future characters: from precise functionality, to open-ended exploration.
-    </p>
+          <!-- Characters grid extending beyond main column -->
+          <div class="relative -mx-16 md:-mx-32 lg:-mx-40 xl:-mx-48 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+              <!-- Sightseer -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                >
+                  <img
+                    src="images/sightseer.gif"
+                    alt="Sightseer character"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg w-full font-semibold">Sightseer</h3>
+                <p class="mb-6 leading-snug font-light">
+                  The Sightseer finds points of interest between you and your
+                  destination and helping you to explore while having an end
+                  destination in mind.
+                </p>
+                <div class="aspect-[5/4] overflow-hidden w-full max-w-[320px]">
+                  <img
+                    src="images/sightseer_map.jpg"
+                    alt="Sightseer map view"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
-    <div class="flex space-x-8">
-      <div class="flex flex-col items-center">
-        <h3 class="mb-2 text-lg font-semibold">Sightseer</h3>
-        <img
-          src="images/sightseer.gif"
-          alt="Description of GIF 1"
-          class="mb-2"
-        />
-        <p class="mb-2">
-          The Sightseer will take you via landmarks throughout your environment
-          as you travel to your destination.
-        </p>
-        <img
-          src="images/sightseer_map.jpg"
-          alt="Description of Image 1"
-          class="mt-2"
-        />
+              <!-- Nightlight -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                >
+                  <img
+                    src="images/nightlight.gif"
+                    alt="Nightlight character"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold w-full">Nightlight</h3>
+                <p class="mb-6 leading-snug font-light">
+                  The Nightlight is a welcoming blob of light that helps you
+                  navigate confidently at night by avoiding unlit streets as
+                  much as possible.
+                </p>
+                <div class="aspect-[5/4] overflow-hidden w-full max-w-[320px]">
+                  <img
+                    src="images/nightlight_map.jpg"
+                    alt="Nightlight map view"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <!-- Commuter -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                >
+                  <img
+                    src="images/commuter.gif"
+                    alt="Commuter character"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold w-full">Commuter</h3>
+                <p class="mb-6 leading-snug font-light">
+                  The Commuter generates 100 routes between two locations of
+                  your choice. Every time you travel you are provided with a new
+                  route.
+                </p>
+                <div class="aspect-[5/4] overflow-hidden w-full max-w-[320px]">
+                  <img
+                    src="images/commuter_map.gif"
+                    alt="Commuter map view"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-semibold">How did this come about?</h2>
+          <p class="leading-snug font-light">
+            With Sproute I wanted to continue evaluating the ideas that I had
+            come up with during my Agency Agency project. Namely what technology
+            might feel like with less of a focus on efficiency and
+            'frictionlesness'
+          </p>
+
+          <p class="mb-4 leading-snug font-light">
+            Most navigation apps are built on the assumption that the most
+            useful route for you is always the fastest and most efficient.
+            Sproute, instead, started by asking how many different routes could
+            we get from A to B? And what other routes could we take if we added
+            a couple of minutes to our journey time?
+          </p>
+
+          <img
+            src="images/usingSproute.gif"
+            alt="Using Sproute app"
+            class="w-full mb-8"
+          />
+
+          <h2 class="text-2xl font-semibold">What was the process?</h2>
+
+          <!-- Process section with side images -->
+          <div class="relative">
+            <!-- Left side images container -->
+            <div class="hidden md:block absolute left-[-280px] w-[250px]">
+              <div class="sticky top-8 space-y-8">
+                <img
+                  src="images/openStreetMap_streetlight_data.png"
+                  alt="Street light data from OpenStreetMap"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+                <img
+                  src="images/sproute_sketchbook.jpg"
+                  alt="Sproute sketchbook"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+                <img
+                  src="images/sproute_tourist_map.gif"
+                  alt="Sproute tourist map"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+              </div>
+            </div>
+
+            <!-- Right side images container -->
+            <div class="hidden md:block absolute right-[-280px] w-[250px]">
+              <div class="sticky top-8 space-y-8">
+                <img
+                  src="images/sproute_superpowers.jpg"
+                  alt="Sproute superpowers"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+                <img
+                  src="images/sproute_technical_prototype.gif"
+                  alt="Sproute technical prototype"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+                <img
+                  src="images/Sightseer_process.gif"
+                  alt="Sightseer process"
+                  class="w-full rounded-sm cursor-pointer hover:scale-[1.02] transition-transform duration-200 hover:shadow-lg"
+                  onclick="openModal(this.src, this.alt)"
+                />
+              </div>
+            </div>
+
+            <!-- Main text content stays in document flow -->
+            <p class="mb-4 leading-snug font-light">
+              I planned my work through the lenses of Role, Look and Feel, and
+              Implementation.
+            </p>
+            <p class="mb-4 leading-snug font-light">
+              Throughout the process, I was running small 'role' experiments,
+              such as keeping a map of Berlin and drawing every single street I
+              went down, or trying to navigate without maps, I also made a set
+              of way-finding activity cards and persuaded employees from the
+              lab's mother company to try them out. The workshop that followed
+              these activity cards showed that the role-playing aspects of the
+              more oddball activities (like asking people to be stealthy spies)
+              generated the most engagement and reflection.
+            </p>
+            <p class="mb-4 leading-snug font-light">
+              This power of characters to shift behaviour became the foundation
+              for Sproute. Once we settled on this direction, the character
+              selections screens from video games seemed like the best
+              interaction metaphor that people would understand quickly, while
+              also putting them in a playful mindset.
+            </p>
+            <p class="mb-4 leading-snug font-light">
+              Of course, the whole point of this was to show that technology can
+              be so much more than just 'efficient', so there was just as much
+              work on the implementation end to find which data-sources and
+              algorithms would be feasible and helpful.<sup
+                class="font-bold font-size-sm pl-[2px]"
+                >1</sup
+              >
+            </p>
+            <p class="mb-8 leading-snug font-light">
+              We sourced street-light data, landmarks, and map graphs from Open
+              Street Map (OSM), and explore the Graphhopper API to understand
+              what parameters we could affect the route generation.
+            </p>
+
+            <!-- Mobile-only images -->
+            <div class="md:hidden flex flex-col gap-4 mb-8">
+              <img
+                src="images/openStreetMap_streetlight_data.png"
+                alt="Street light data from OpenStreetMap"
+                class="w-full"
+              />
+              <img
+                src="images/sproute_sketchbook.jpg"
+                alt="Sproute sketchbook"
+                class="w-full"
+              />
+              <img
+                src="images/sproute_tourist_map.gif"
+                alt="Sproute tourist map"
+                class="w-full"
+              />
+              <img
+                src="images/sproute_superpowers.jpg"
+                alt="Sproute superpowers"
+                class="w-full"
+              />
+              <img
+                src="images/sproute_technical_prototype.gif"
+                alt="Sproute technical prototype"
+                class="w-full"
+              />
+              <img
+                src="images/Sightseer_process.gif"
+                alt="Sightseer process"
+                class="w-full"
+              />
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-semibold">Applied Speculation</h2>
+          <p class="leading-snug font-light">
+            The goal of the residency was to make a covertly speculative
+            project, one that normal people would want to try out, but that
+            would still get the point across. I would say we succeeded on that
+            front.
+          </p>
+          <p class="leading-snug font-light">
+            This whole project was obviously also a metaphor for other
+            efficiency minded uses of technology. And I admit it, most of the
+            time, the fastest route probably is the one that we want. But,
+            somehow I see more and more friends and family not even realising
+            that technology could even help them find anything other than the
+            'fastest route'<sup class="font-bold font-size-sm pl-[2px]">2</sup>.
+            And I think that's a shame.
+          </p>
+
+          <!-- Footnotes -->
+          <ol class="list-decimal pl-5 mt-6 text-sm text-gray-600 font-light">
+            <li>
+              Again shoutout to Florian, we became good friends working together
+              on this project.
+            </li>
+            <li>
+              For example with the street light data from OSM, data's a source
+              of data that most people don't even realize exists.
+            </li>
+          </ol>
+
+          <img
+            src="images/how_many_routes_sproute.gif"
+            alt="How many routes in Sproute"
+            class="w-full mb-12"
+          />
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <h3 class="mb-2 text-lg font-semibold">Nightlight</h3>
+    </div>
+
+    <!-- Add this at the end of body but before closing body tag -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="relative max-w-4xl mx-4 transform scale-95 transition-transform duration-300"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute -top-12 right-0 text-white text-3xl hover:text-lime-400 transition-colors"
+        >
+          &times;
+        </button>
         <img
-          src="images/nightlight.gif"
-          alt="Description of GIF 2"
-          class="mb-2"
-        />
-        <p class="mb-2">
-          The Nightlight is a welcoming blob of light that helps you navigate
-          confidently at night by avoiding unlit streets as much as possible.
-        </p>
-        <img
-          src="images/nightlight_map.jpg"
-          alt="Description of Image 2"
-          class="mt-2"
-        />
-      </div>
-      <div class="flex flex-col items-center">
-        <h3 class="mb-2 text-lg font-semibold">Commuter</h3>
-        <img
-          src="images/commuter.gif"
-          alt="Description of GIF 3"
-          class="mb-2"
-        />
-        <p class="mb-2">
-          The Commuter generates 100 routes between two locations of your
-          choice. Every time you travel you are provided with a new route.
-        </p>
-        <img
-          src="images/commuter_map.gif"
-          alt="Description of Image 3"
-          class="mt-2"
+          id="modalImage"
+          src=""
+          alt=""
+          class="w-full rounded-lg shadow-2xl"
         />
       </div>
     </div>
 
-    <h2 class="mb-4 text-2xl font-semibold">How did this come about?</h2>
+    <!-- Add this script before closing body tag -->
+    <script>
+      function openModal(imgSrc, alt) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
 
-    <p class="mb-12">
-      With Sproute I wanted to continue evaluating the ideas that I had come up
-      with during my Agency Agency project. Namely that user friendliness
-      doesn't mean focusing on efficiency and "frictionless" experiences.
-    </p>
-    <img
-      src="images/usingSproute.gif"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <p class="mb-12">
-      Most navigation apps are built on the assumption that the most useful
-      route for you is always the fastest and most efficient. Sproute tries to
-      question this assumption. Instead, asking how many different routes could
-      we get from A to B? And what other routes could we take if we added a
-      couple of minutes to our journey time?
-    </p>
-    <img
-      src="images/how_many_routes_sproute.gif"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <p class="mb-12">
-      Most navigation apps are built on the assumption that the most useful
-      route for you is always the fastest and most efficient. Sproute tries to
-      question this assumption. Instead, asking how many different routes could
-      we get from A to B? And what other routes could we take if we added a
-      couple of minutes to our journey time?
-    </p>
-    <ul class="mb-12 list-disc list-inside">
-      <li>
-        Create a critical project that is also approachable and understandable.
-      </li>
-      <li>Make a fully functioning prototype.</li>
-      <li>People should actually try it, not just read about it.</li>
-    </ul>
-    <h2 class="mb-4 text-2xl font-semibold">What was the process?</h2>
-    <p class="mb-12">
-      Using the framework from the research paper "What do prototypes
-      prototype?" I planned my own prototypes according to their model of Role,
-      Look and Feel, and Implementation.
-    </p>
-    <h3 class="mb-2 text-lg font-semibold">Role</h3>
-    <p class="mb-12">
-      A few weeks into the project I presented my progress to 60 employees in
-      the company, and used the opportunity to try out the design directions
-      that had started to bubble to the top. I randomly assigned an activity for
-      each person to do over a 2 week period. Since this was more about the
-      behaviours, I designed a set of cards that told them what to do, rather
-      than losing time trying to program the experiences.
-    </p>
-    <img
-      src="images/sproute_tourist_map.gif"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <img
-      src="images/sproute_superpowers.jpg"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <p class="mb-12">
-      After the 2 weeks I gathered the participants back and lead a short
-      workshop. Amazingly the role playing aspects of some of the more oddball
-      activities, such as asking people to pretend to be stealthy ninjas, had
-      actually led to the most engagement and reflection among participants.
-      This power of characters and role play to get people to behave differently
-      than they usually would was what we tried to harness in Sproute.
-    </p>
-    <h3 class="mb-2 text-lg font-semibold">Implementation</h3>
-    <p class="mb-12">
-      Digging through and testing out the "alternate route" functions in the
-      Graphhopper API allowed me to quickly understand how the various
-      parametres affected what routes we could generate. All the street-light
-      and landmark data, as well well as the map graphs themselves came from
-      Open Street Map (OSM). The open source nature of OSM means that
-      unfortunately the app itself is biased towards communities where there is
-      more available data (usually well-populated western countries), but in the
-      future the hope is to encourage Sproute users to contribute back to OSM in
-      areas where the data is incorrect (e.g missing streetlights).
-    </p>
-    <img
-      src="images/openStreetMap_streetlight_data.png"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <img
-      src="images/sproute_technical_prototype.gif"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <p class="mb-12">
-      Many of the algorithm ideas, as well as the final implementations and code
-      were made by Florian Porada, who was in charge of programming the
-      functioning Sproute app.
-    </p>
-    <h3 class="mb-2 text-lg font-semibold">Look and feel</h3>
-    <p class="mb-12">
-      Once the idea of using character based routing was settled on, and we had
-      verified that it would be possible to translate it into code, the next
-      challenge was making this new framework feel approachable.
-    </p>
-    <img
-      src="images/sproute_sketchbook.jpg"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <img
-      src="images/Sightseer_process.gif"
-      alt="Description of GIF 3"
-      class="mb-2"
-    />
-    <p class="mb-12">
-      Paper prototypes led me to the idea of re-contextualising the character
-      selection screens from games like Mario Kart and Street Fighter. Using a
-      familiar and simple interaction also helps transmit the concept behind
-      Sproute to any newcomers.
-    </p>
-    <h2 class="mb-4 text-2xl font-semibold">Applied Speculation</h2>
-    <p class="mb-12">
-      My hope is that, if nurtured correctly, Sproute could start to evolve from
-      a proof of concept to an open-sourced routing platform. Which is to say,
-      rather a place for sharing specific routes, it would be a place to share
-      the algorithms that create those kinds of routes.
-    </p>
-    <p class="mb-12">
-      A central repository of routing algorithms would give research groups and
-      hobbyists a-like a centralised place to share their creations. Bundling
-      functionalities in the same platform means that certain gate-way
-      characters can help people build trust in the rest of the system and then
-      eventually branch out into the more eccentric characters.
-    </p>
-    <h2 class="mb-4 text-2xl font-semibold">
-      How would you get lost in a self driving car?
-    </h2>
-    <p class="mb-12">
-      The last thing to mention is the role that non-linear navigation could
-      play in a future in which we end up with autonomous vehicles, or even in
-      the milder future where we become even more reliant on our mapping apps.
-    </p>
-    <p class="mb-12">
-      Taking a wrong turn or getting lost can be a blessing rather than a curse.
-      It affords us the opportunity to explore our environments and learn new
-      things about familiar places. Understanding efficiency and utility to mean
-      "As Soon As Possible" means we'll lose those moments of discovery: how can
-      you get lost in a self-driving car? Non-linear routing like what we've
-      explored in Sproute could be a way of introducing a little more
-      uncertainty back into the system.
-    </p>
-    <p class="mb-12">
-      However Sproute's aim isn't just to offer a new way of getting around, it
-      is to show the assumptions and interactions that are taken for granted
-      across all of our interactions with technology, not just mobility.
-    </p>
+        modalImg.src = imgSrc;
+        modalImg.alt = alt;
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        // Trigger animation
+        requestAnimationFrame(() => {
+          modal.classList.remove("opacity-0");
+          modal.querySelector("div").classList.remove("scale-95");
+          modal.querySelector("div").classList.add("scale-100");
+        });
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+
+        modal.classList.add("opacity-0");
+        modal.querySelector("div").classList.remove("scale-100");
+        modal.querySelector("div").classList.add("scale-95");
+
+        setTimeout(() => {
+          modal.classList.remove("flex");
+          modal.classList.add("hidden");
+        }, 300);
+      }
+
+      // Close on background click
+      document.getElementById("imageModal").addEventListener("click", (e) => {
+        if (e.target === e.currentTarget) closeModal();
+      });
+    </script>
   </body>
 </html>
