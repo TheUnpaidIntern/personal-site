@@ -7,46 +7,72 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* You can add custom styles here */
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        line-height: 1.4;
+      }
     </style>
   </head>
-  <body class="font-sans text-base max-w-2xl mx-auto px-4 py-32 font-light">
-    <p class="mb-12">
-      <a href="index.html" class="text-lime-600 animated-underline">← back</a>
+  <body
+    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light"
+  >
+    <p class="mb-8">
+      <a href="index.html" class="text-lime-600 animated-underline">← Back</a>
     </p>
-    <div class="mb-12">
+
+    <h1 class="text-2xl font-semibold mb-2">Letters to Felix</h1>
+    <h2 class="text-lg italic text-gray-500 mb-6">
+      An educational community tv show about emerging technologies
+    </h2>
+
+    <div class="video-container">
       <iframe
-        width="560"
-        height="315"
         src="https://www.youtube.com/embed/f0Ii2ScExT0"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      >
-      </iframe>
+      ></iframe>
     </div>
-    <h2 class="mb-4 text-2xl font-semibold">
-      An educational community tv show about emerging technologies
-    </h2>
-    <p class="mb-12">
-      This project was created alongside Alex Penman during out 7 week residency
-      at Laboratory Spokane . Follow @Auxillius.cord on instagram to see photos
-      from the trip
+
+    <p class="mb-4">
+      This project was created alongside Alex Penman during our 7 week residency
+      at Laboratory Spokane. Follow @Auxillius.cord on instagram to see photos
+      from the trip.
     </p>
-    <p class="mb-12">
+
+    <p class="mb-4">
       Our goal was to get non-experts involved in exploring and understanding
       Augmented Reality (AR). To this end we made an educational program called
       "Letters to Felix" where we make the same AR experience at 3 levels of
       complexity, so that everyone at home can follow along. Over the course of
       the episode you'll not only be exposed to the past, present, and future of
       the technology, but you'll also be taught the theory and skills needed to
-      start experimenting and developing your own experiences. The show is made
-      in the style of old 70's and 80's educational programs, in order to be
-      more distinct and engaging than a youtube tutorial. With the increasing
-      influence that XR technologies such as AR and VR are having on our lives,
-      it is important that everyone can be part of the conversation about their
-      future.
+      start experimenting and developing your own experiences.
+    </p>
+
+    <p class="mb-4">
+      The show is made in the style of old 70's and 80's educational programs,
+      in order to be more distinct and engaging than a youtube tutorial. With
+      the increasing influence that XR technologies such as AR and VR are having
+      on our lives, it is important that everyone can be part of the
+      conversation about their future.
     </p>
   </body>
 </html>

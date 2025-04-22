@@ -53,6 +53,14 @@
         width: 100%;
         max-width: 2xl;
         margin: 0 auto;
+        display: none; /* Hide by default */
+      }
+
+      /* Show trigger line only on touch devices */
+      @media (hover: none) and (pointer: coarse) {
+        #trigger-line {
+          display: block;
+        }
       }
 
       /* Class to be added to links when they intersect with the trigger line */
@@ -102,7 +110,9 @@
       }
     </style>
   </head>
-  <body class="font-sans text-base max-w-2xl mx-auto px-12 py-32 light-text">
+  <body
+    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light"
+  >
     <!-- Trigger line for mobile hover alternative -->
     <div id="trigger-line"></div>
 
@@ -388,7 +398,7 @@
         </p>
       </div>
 
-      <div class="mb-8">
+      <!-- <div class="mb-8">
         <p class="text-lg font-semibold">Writing:</p>
         •
         <a
@@ -399,7 +409,7 @@
         <br />
         •
         <a href="" class="text-lime-600 animated-underline">3D Scanning post</a>
-      </div>
+      </div> -->
 
       <div class="mb-8">
         <p class="text-lg font-semibold">Media and Exhibits:</p>
@@ -671,20 +681,23 @@
         }
       }
 
-      // Call this on load and resize
-      window.addEventListener("load", positionTriggerLine);
-      window.addEventListener("resize", positionTriggerLine);
+      // Only initialize trigger line functionality on touch devices
+      if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+        // Call this on load and resize
+        window.addEventListener("load", positionTriggerLine);
+        window.addEventListener("resize", positionTriggerLine);
 
-      // Check for intersections on scroll
-      window.addEventListener("scroll", checkIntersections);
+        // Check for intersections on scroll
+        window.addEventListener("scroll", checkIntersections);
 
-      // Add touch events for mobile
-      window.addEventListener("touchstart", checkIntersections);
-      window.addEventListener("touchmove", checkIntersections);
-      window.addEventListener("touchend", checkIntersections);
+        // Add touch events for mobile
+        window.addEventListener("touchstart", checkIntersections);
+        window.addEventListener("touchmove", checkIntersections);
+        window.addEventListener("touchend", checkIntersections);
 
-      // Initial check
-      window.addEventListener("load", checkIntersections);
+        // Initial check
+        window.addEventListener("load", checkIntersections);
+      }
 
       function checkIntersections() {
         // We now use the dynamically calculated triggerLineY
