@@ -8,11 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-sans text-base bg-white">
-    <div class="max-w-5xl mx-auto px-4 py-12 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 py-12 md:py-24 overflow-visible">
       <!-- Main content area with consistent width -->
-      <div class="flex justify-center">
+      <div class="flex justify-center overflow-visible">
         <!-- Main text column -->
-        <div class="flex flex-col w-full max-w-2xl gap-4">
+        <div class="flex flex-col w-full max-w-2xl gap-4 overflow-visible">
           <p class="mb-8">
             <a href="index.html" class="text-lime-600 animated-underline"
               >← Back</a
@@ -55,8 +55,118 @@
           </p>
 
           <!-- Characters grid extending beyond main column -->
-          <div class="relative -mx-16 md:-mx-32 lg:-mx-40 xl:-mx-48 mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          <div
+            class="relative -mx-4 md:-mx-16 md:-mx-32 lg:-mx-40 xl:-mx-48 mb-12"
+          >
+            <!-- Mobile carousel -->
+            <div class="md:hidden w-full">
+              <div
+                class="carousel-container flex snap-x snap-mandatory overflow-x-auto scrollbar-hide px-4"
+              >
+                <!-- Sightseer -->
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                    >
+                      <img
+                        src="images/sightseer.gif"
+                        alt="Sightseer character"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 class="text-lg w-full font-semibold">Sightseer</h3>
+                    <p class="mb-6 leading-snug font-light">
+                      The Sightseer finds points of interest between you and
+                      your destination and helping you to explore while having
+                      an end destination in mind.
+                    </p>
+                    <div class="aspect-[5/4] overflow-hidden w-full">
+                      <img
+                        src="images/sightseer_map.jpg"
+                        alt="Sightseer map view"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nightlight -->
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                    >
+                      <img
+                        src="images/nightlight.gif"
+                        alt="Nightlight character"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 class="text-lg font-semibold w-full">Nightlight</h3>
+                    <p class="mb-6 leading-snug font-light">
+                      The Nightlight is a welcoming blob of light that helps you
+                      navigate confidently at night by avoiding unlit streets as
+                      much as possible.
+                    </p>
+                    <div class="aspect-[5/4] overflow-hidden w-full">
+                      <img
+                        src="images/nightlight_map.jpg"
+                        alt="Nightlight map view"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Commuter -->
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="aspect-square overflow-hidden mb-4 w-full max-w-[200px]"
+                    >
+                      <img
+                        src="images/commuter.gif"
+                        alt="Commuter character"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 class="text-lg font-semibold w-full">Commuter</h3>
+                    <p class="mb-6 leading-snug font-light">
+                      The Commuter generates 100 routes between two locations of
+                      your choice. Every time you travel you are provided with a
+                      new route.
+                    </p>
+                    <div class="aspect-[5/4] overflow-hidden w-full">
+                      <img
+                        src="images/commuter_map.gif"
+                        alt="Commuter map view"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel indicators -->
+              <div class="flex justify-center gap-2 mt-4">
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator active"
+                  data-index="0"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator"
+                  data-index="1"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator"
+                  data-index="2"
+                ></button>
+              </div>
+            </div>
+
+            <!-- Desktop grid -->
+            <div class="hidden md:grid md:grid-cols-3 gap-8 px-4">
               <!-- Sightseer -->
               <div class="flex flex-col items-center">
                 <div
@@ -233,6 +343,58 @@
               interaction metaphor that people would understand quickly, while
               also putting them in a playful mindset.
             </p>
+
+            <!-- First mobile carousel -->
+            <div class="md:hidden -mx-4">
+              <div
+                class="carousel-container-1 flex snap-x snap-mandatory overflow-x-auto scrollbar-hide px-4"
+              >
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/Sightseer_process.gif"
+                      alt="Sightseer process"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/sproute_superpowers.jpg"
+                      alt="Sproute superpowers"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/sproute_sketchbook.jpg"
+                      alt="Sproute sketchbook"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel indicators -->
+              <div class="flex justify-center gap-2 mt-4 mb-8">
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-1 active"
+                  data-index="0"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-1"
+                  data-index="1"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-1"
+                  data-index="2"
+                ></button>
+              </div>
+            </div>
+
             <p class="mb-4 leading-snug font-light">
               Of course, the whole point of this was to show that technology can
               be so much more than just 'efficient', so there was just as much
@@ -248,38 +410,55 @@
               what parameters we could affect the route generation.
             </p>
 
-            <!-- Mobile-only images -->
-            <div class="md:hidden flex flex-col gap-4 mb-8">
-              <img
-                src="images/Sightseer_process.gif"
-                alt="Sightseer process"
-                class="w-full"
-              />
-              <img
-                src="images/sproute_tourist_map.gif"
-                alt="Sproute tourist map"
-                class="w-full"
-              />
-              <img
-                src="images/openStreetMap_streetlight_data.png"
-                alt="Street light data from OpenStreetMap"
-                class="w-full"
-              />
-              <img
-                src="images/sproute_technical_prototype.gif"
-                alt="Sproute technical prototype"
-                class="w-full"
-              />
-              <img
-                src="images/sproute_superpowers.jpg"
-                alt="Sproute superpowers"
-                class="w-full"
-              />
-              <img
-                src="images/sproute_sketchbook.jpg"
-                alt="Sproute sketchbook"
-                class="w-full"
-              />
+            <!-- Second mobile carousel -->
+            <div class="md:hidden -mx-4">
+              <div
+                class="carousel-container-2 flex snap-x snap-mandatory overflow-x-auto scrollbar-hide px-4"
+              >
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/sproute_tourist_map.gif"
+                      alt="Sproute tourist map"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/openStreetMap_streetlight_data.png"
+                      alt="Street light data from OpenStreetMap"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+                <div class="flex-none w-[85%] snap-center mr-6">
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="images/sproute_technical_prototype.gif"
+                      alt="Sproute technical prototype"
+                      class="w-full h-full object-cover rounded-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel indicators -->
+              <div class="flex justify-center gap-2 mt-4 mb-8">
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-2 active"
+                  data-index="0"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-2"
+                  data-index="1"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-full bg-gray-300 carousel-indicator-2"
+                  data-index="2"
+                ></button>
+              </div>
             </div>
           </div>
 
@@ -381,6 +560,57 @@
       document.getElementById("imageModal").addEventListener("click", (e) => {
         if (e.target === e.currentTarget) closeModal();
       });
+
+      // Carousel functionality for all carousels
+      document.addEventListener("DOMContentLoaded", () => {
+        // Setup for characters carousel
+        setupCarousel(".carousel-container", ".carousel-indicator");
+
+        // Setup for first carousel
+        setupCarousel(".carousel-container-1", ".carousel-indicator-1");
+
+        // Setup for second carousel
+        setupCarousel(".carousel-container-2", ".carousel-indicator-2");
+
+        function setupCarousel(containerSelector, indicatorSelector) {
+          const container = document.querySelector(containerSelector);
+          const indicators = document.querySelectorAll(indicatorSelector);
+
+          if (container) {
+            // Update indicators based on scroll position
+            container.addEventListener("scroll", () => {
+              const index = Math.round(
+                container.scrollLeft / container.offsetWidth
+              );
+              indicators.forEach((indicator, i) => {
+                indicator.classList.toggle("bg-lime-600", i === index);
+                indicator.classList.toggle("bg-gray-300", i !== index);
+              });
+            });
+
+            // Handle indicator clicks
+            indicators.forEach((indicator, index) => {
+              indicator.addEventListener("click", () => {
+                container.scrollTo({
+                  left: index * container.offsetWidth,
+                  behavior: "smooth",
+                });
+              });
+            });
+          }
+        }
+      });
     </script>
+
+    <style>
+      /* Hide scrollbar but keep functionality */
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+      }
+    </style>
   </body>
 </html>
