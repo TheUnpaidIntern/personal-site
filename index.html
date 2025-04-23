@@ -111,15 +111,17 @@
     </style>
   </head>
   <body
-    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light"
+    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light mb-64 md:mb-0"
   >
     <!-- Trigger line for mobile hover alternative -->
     <div id="trigger-line"></div>
 
-    <h1 class="text-2xl font-semibold">Julius Ingemann Breitenstein</h1>
-    <h2 class="text-lg italic text-gray-500">
-      Hardware and software interaction designer
-    </h2>
+    <div class="my-32 md:mb-0">
+      <h1 class="text-2xl font-semibold">Julius Ingemann Breitenstein</h1>
+      <h2 class="text-lg italic text-gray-500">
+        Hardware and software interaction designer
+      </h2>
+    </div>
 
     <p class="mb-4 mt-8">
       In 2021 I was hired as the founding designer at
@@ -669,16 +671,12 @@
       let activeLink = null;
       let triggerLineY = 0; // We'll calculate this dynamically
 
-      // Position the trigger line below the subtitle
+      // Position the trigger line at a fixed position
       function positionTriggerLine() {
-        const subtitle = document.querySelector("h2");
-        if (subtitle) {
-          const subtitleRect = subtitle.getBoundingClientRect();
-          const subtitleBottom = subtitleRect.bottom;
-          // Add a small offset (5px) below the subtitle
-          triggerLineY = subtitleBottom + 5;
-          triggerLine.style.top = `${triggerLineY}px`;
-        }
+        // Set trigger line to be 300px from the top of the viewport
+        triggerLineY = 300;
+        triggerLine.style.top = `${triggerLineY}px`;
+        triggerLine.style.position = "fixed";
       }
 
       // Only initialize trigger line functionality on touch devices
