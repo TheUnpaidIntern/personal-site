@@ -663,6 +663,12 @@
         });
       }
 
+      // Trigger line intersection detection
+      const triggerLine = document.getElementById("trigger-line");
+      const projectLinks = document.querySelectorAll(".project-link");
+      let activeLink = null;
+      let triggerLineY = 0; // We'll calculate this dynamically
+
       // Position the trigger line below the subtitle
       function positionTriggerLine() {
         const subtitle = document.querySelector("h2");
@@ -683,11 +689,6 @@
 
         // Check for intersections on scroll
         window.addEventListener("scroll", checkIntersections);
-
-        // Remove touch events to prevent hover effect on click
-        // window.addEventListener("touchstart", checkIntersections);
-        // window.addEventListener("touchmove", checkIntersections);
-        // window.addEventListener("touchend", checkIntersections);
 
         // Initial check
         window.addEventListener("load", checkIntersections);
