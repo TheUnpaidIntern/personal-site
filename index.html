@@ -688,6 +688,13 @@
         // Check for intersections on scroll
         window.addEventListener("scroll", checkIntersections);
 
+        // Prevent hover effect on touch
+        document.querySelectorAll(".project-link").forEach((link) => {
+          link.addEventListener("touchstart", (e) => {
+            e.preventDefault();
+          });
+        });
+
         // Initial check
         window.addEventListener("load", checkIntersections);
       }
