@@ -663,19 +663,13 @@
         });
       }
 
-      // Trigger line intersection detection
-      const triggerLine = document.getElementById("trigger-line");
-      const projectLinks = document.querySelectorAll(".project-link");
-      let activeLink = null;
-      let triggerLineY = 0; // We'll calculate this dynamically
-
       // Position the trigger line below the subtitle
       function positionTriggerLine() {
         const subtitle = document.querySelector("h2");
         if (subtitle) {
           const subtitleRect = subtitle.getBoundingClientRect();
           const subtitleBottom = subtitleRect.bottom;
-          // Add a small offset (20px) below the subtitle
+          // Add a small offset (5px) below the subtitle
           triggerLineY = subtitleBottom + 5;
           triggerLine.style.top = `${triggerLineY}px`;
         }
@@ -690,25 +684,22 @@
         // Check for intersections on scroll
         window.addEventListener("scroll", checkIntersections);
 
-        // Add touch events for mobile
-        window.addEventListener("touchstart", checkIntersections);
-        window.addEventListener("touchmove", checkIntersections);
-        window.addEventListener("touchend", checkIntersections);
+        // Remove touch events to prevent hover effect on click
+        // window.addEventListener("touchstart", checkIntersections);
+        // window.addEventListener("touchmove", checkIntersections);
+        // window.addEventListener("touchend", checkIntersections);
 
         // Initial check
         window.addEventListener("load", checkIntersections);
       }
 
       function checkIntersections() {
-        // We now use the dynamically calculated triggerLineY
-        // No need to hardcode 190px anymore
-
+        // Use the fixed triggerLineY value
         projectLinks.forEach((link) => {
           const rect = link.getBoundingClientRect();
           const linkMiddleY = rect.top + rect.height / 2;
 
           // Check if link intersects with trigger line
-          // Increased tolerance for mobile (from 20px to 30px)
           const intersects = Math.abs(linkMiddleY - triggerLineY) < 30;
 
           if (intersects && link !== activeLink) {
