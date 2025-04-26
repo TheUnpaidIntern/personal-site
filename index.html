@@ -738,6 +738,9 @@
               removeHoverEffect(activeLink);
             }
 
+            // Calculate random values on first intersection
+            calculateRandomValues(link);
+
             // Activate new link
             link.classList.add("trigger-active");
             applyHoverEffect(link);
