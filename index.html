@@ -592,13 +592,11 @@
               this.style.width = "100px";
               this.style.height = "auto";
             }
-
-            // Initialize random values when image loads
-            calculateRandomValues(link);
           };
         });
 
         link.addEventListener("mouseenter", () => {
+          calculateRandomValues(link);
           applyHoverEffect(link);
         });
 
