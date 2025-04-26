@@ -701,8 +701,8 @@
 
       // Only initialize trigger line functionality on touch devices
       if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-        // Call this on load and resize
-        window.addEventListener("load", positionTriggerLine);
+        // Call this immediately and on resize
+        positionTriggerLine(); // Add immediate call
         window.addEventListener("resize", positionTriggerLine);
 
         // Check for intersections on scroll
@@ -715,8 +715,11 @@
           });
         });
 
-        // Initial check
-        window.addEventListener("load", checkIntersections);
+        // Initial check on DOMContentLoaded instead of load
+        document.addEventListener("DOMContentLoaded", () => {
+          positionTriggerLine();
+          checkIntersections();
+        });
       }
 
       function checkIntersections() {
