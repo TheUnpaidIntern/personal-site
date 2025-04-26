@@ -690,6 +690,8 @@
       const projectLinks = document.querySelectorAll(".project-link");
       let activeLink = null;
       let triggerLineY = 0; // We'll calculate this dynamically
+      let debounceTimeout = null;
+      const DEBOUNCE_DELAY = 30; // 100ms debounce delay
 
       // Position the trigger line at a fixed position
       function positionTriggerLine() {
@@ -705,8 +707,13 @@
         positionTriggerLine(); // Add immediate call
         window.addEventListener("resize", positionTriggerLine);
 
-        // Check for intersections on scroll
-        window.addEventListener("scroll", checkIntersections);
+        // Check for intersections on scroll with debounce
+        window.addEventListener("scroll", () => {
+          if (debounceTimeout) {
+            clearTimeout(debounceTimeout);
+          }
+          debounceTimeout = setTimeout(checkIntersections, DEBOUNCE_DELAY);
+        });
 
         // Prevent hover effect on touch
         document.querySelectorAll(".project-link").forEach((link) => {
@@ -729,7 +736,7 @@
           const linkMiddleY = rect.top + rect.height / 2;
 
           // Check if link intersects with trigger line
-          const intersects = Math.abs(linkMiddleY - triggerLineY) < 30;
+          const intersects = Math.abs(linkMiddleY - triggerLineY) < 20;
 
           if (intersects && link !== activeLink) {
             // Deactivate previous link if there is one
