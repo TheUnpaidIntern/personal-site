@@ -75,6 +75,7 @@
         max-height: 200px;
         transform: translate(0, 0) scale(0.8) rotate(0deg);
         object-fit: contain;
+        visibility: hidden; /* Keep visibility hidden by default */
       }
 
       .hover-image-1 {
@@ -89,6 +90,7 @@
 
       .project-link:hover .hover-image {
         opacity: 1;
+        visibility: visible;
       }
 
       /* Trigger line for mobile */
@@ -117,6 +119,7 @@
       /* Class to be added to links when they intersect with the trigger line */
       .trigger-active .hover-image {
         opacity: 1;
+        visibility: visible;
         /* Ensure transform properties are applied for mobile */
         transform: translate(var(--hover-x, 0px), var(--hover-y, 0%))
           scale(var(--hover-scale, 1)) rotate(var(--hover-rotate, 0deg)) !important;
@@ -621,12 +624,15 @@
           img.style.setProperty("--hover-scale", `${randomScale}`);
           img.style.setProperty("--hover-rotate", `${randomRotate}deg`);
 
+          // First make visible, then apply transform
+          img.style.visibility = "visible";
           img.style.transform = `
             translate(${randomX}px, ${randomY}%) 
             scale(${randomScale}) 
             rotate(${randomRotate}deg)
           `;
           img.style.transitionDelay = `${index * 0.05}s`;
+          img.style.opacity = "1";
         });
       }
 
@@ -634,8 +640,13 @@
       function removeHoverEffect(link) {
         const images = link.querySelectorAll(".hover-image");
         images.forEach((img) => {
+          img.style.opacity = "0";
           img.style.transform = "translate(0, 0) scale(0.8) rotate(0deg)";
           img.style.transitionDelay = "0s";
+          // After transition completes, hide the element
+          setTimeout(() => {
+            img.style.visibility = "hidden";
+          }, 300); // Match the transition duration
         });
         // Clear the random values flag when deactivating
         delete link.dataset.randomValuesSet;
@@ -671,13 +682,23 @@
           debounceTimeout = setTimeout(checkIntersections, DEBOUNCE_DELAY);
         });
 
-        // Prevent hover effect on touch
+        // Prevent hover effect on touch and click
         document.querySelectorAll(".project-link").forEach((link) => {
-          link.addEventListener("touchstart", (e) => {
-            // Only prevent default if we're not clicking a link
-            if (!e.target.closest("a")) {
-              e.preventDefault();
-            }
+          const preventHover = (e) => {
+            // Remove any existing hover effects
+            link.classList.remove("trigger-active");
+            removeHoverEffect(link);
+          };
+
+          // Handle both touch and click events
+          link.addEventListener("touchstart", preventHover);
+          link.addEventListener("click", preventHover);
+
+          // Also prevent hover on the actual links
+          const links = link.querySelectorAll("a");
+          links.forEach((a) => {
+            a.addEventListener("touchstart", preventHover);
+            a.addEventListener("click", preventHover);
           });
         });
 
