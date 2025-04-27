@@ -30,66 +30,84 @@
     </style>
   </head>
   <body
-    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light"
+    class="font-sans text-base max-w-5xl mx-auto px-4 py-12 md:py-24 font-light"
   >
     <p class="mb-8">
       <a href="index.html" class="text-lime-600 animated-underline">← Back</a>
     </p>
 
-    <h1 class="text-2xl font-semibold mb-2">Letters to Felix</h1>
-    <h2 class="text-lg italic text-gray-500 mb-6">
+    <h1 class="text-2xl font-semibold mb-1 md:mb-2">Letters to Felix</h1>
+    <h2 class="text-lg italic text-gray-500 mb-2 md:mb-6">
       An educational community tv show about emerging technologies
     </h2>
 
-    <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/f0Ii2ScExT0"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Main content column -->
+      <div class="flex flex-col md:w-1/2 gap-6">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/f0Ii2ScExT0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <p class="mb-4">
+          This project was created alongside Alex Penman during our 7 week
+          residency at Laboratory Spokane. Follow @Auxillius.cord on instagram
+          to see photos from the trip.
+        </p>
+
+        <p class="mb-4">
+          Our goal was to get non-experts involved in exploring and
+          understanding Augmented Reality (AR). To this end we made an
+          educational program called "Letters to Felix" where we make the same
+          AR experience at 3 levels of complexity, so that everyone at home can
+          follow along. Over the course of the episode you'll not only be
+          exposed to the past, present, and future of the technology, but you'll
+          also be taught the theory and skills needed to start experimenting and
+          developing your own experiences.
+        </p>
+
+        <p class="mb-4">
+          The show is made in the style of old 70's and 80's educational
+          programs, in order to be more distinct and engaging than a youtube
+          tutorial. With the increasing influence that XR technologies such as
+          AR and VR are having on our lives, it is important that everyone can
+          be part of the conversation about their future.
+        </p>
+      </div>
+
+      <!-- Images column (desktop only) -->
+      <div class="hidden md:flex md:w-1/2 flex-col gap-6">
+        <img
+          src="images/letters_to_felix_at_desk.webp"
+          alt="Letters to Felix at desk"
+          class="hover-image hover-image-2"
+        />
+        <img
+          src="images/letters_to_felix_BTS.webp"
+          alt="Letters to Felix behind the scenes"
+          class="hover-image hover-image-3"
+        />
+      </div>
+
+      <!-- Images for mobile only -->
+      <div class="md:hidden w-full flex flex-col gap-6">
+        <img
+          src="images/letters_to_felix_at_desk.webp"
+          alt="Letters to Felix at desk"
+          class="hover-image hover-image-2"
+        />
+        <img
+          src="images/letters_to_felix_BTS.webp"
+          alt="Letters to Felix behind the scenes"
+          class="hover-image hover-image-3"
+        />
+      </div>
     </div>
-
-    <p class="mb-4">
-      This project was created alongside Alex Penman during our 7 week residency
-      at Laboratory Spokane. Follow @Auxillius.cord on instagram to see photos
-      from the trip.
-    </p>
-
-    <p class="mb-4">
-      Our goal was to get non-experts involved in exploring and understanding
-      Augmented Reality (AR). To this end we made an educational program called
-      "Letters to Felix" where we make the same AR experience at 3 levels of
-      complexity, so that everyone at home can follow along. Over the course of
-      the episode you'll not only be exposed to the past, present, and future of
-      the technology, but you'll also be taught the theory and skills needed to
-      start experimenting and developing your own experiences.
-    </p>
-
-    <p class="mb-4">
-      The show is made in the style of old 70's and 80's educational programs,
-      in order to be more distinct and engaging than a youtube tutorial. With
-      the increasing influence that XR technologies such as AR and VR are having
-      on our lives, it is important that everyone can be part of the
-      conversation about their future.
-    </p>
-
-    <img
-      src="images/letters_to_felix_title.webp"
-      alt="Letters to Felix title"
-      class="hover-image hover-image-1"
-    />
-    <img
-      src="images/letters_to_felix_at_desk.webp"
-      alt="Letters to Felix at desk"
-      class="hover-image hover-image-2"
-    />
-    <img
-      src="images/letters_to_felix_BTS.webp"
-      alt="Letters to Felix behind the scenes"
-      class="hover-image hover-image-3"
-    />
 
     <script>
       window.si =
