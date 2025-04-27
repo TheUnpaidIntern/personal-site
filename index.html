@@ -674,7 +674,10 @@
         // Prevent hover effect on touch
         document.querySelectorAll(".project-link").forEach((link) => {
           link.addEventListener("touchstart", (e) => {
-            e.preventDefault();
+            // Only prevent default if we're not clicking a link
+            if (!e.target.closest("a")) {
+              e.preventDefault();
+            }
           });
         });
 
