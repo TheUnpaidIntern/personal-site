@@ -4,56 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Julius Ingemann Breitenstein - Hardware and Software Interaction Designer
+      Julius Ingemann Breitenstein - Hardware and Software Interaction Designer, Head of Design at Teton
     </title>
 
     <!-- Primary Meta Tags -->
     <meta
       name="title"
-      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer"
+      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer, Head of Design at Teton"
     />
     <meta
       name="description"
-      content="Portfolio of Julius Ingemann Breitenstein, a hardware and software interaction designer. Currently working at Teton, previously at CIID, and with experience in product design, healthcare technology, and creative technology."
+      content="Hardware and software interaction designer in Copenhagen, and Head of Design at Teton. Previously Sproute, the Unpaid Intern, CIID and Central Saint Martins."
     />
     <meta
       name="keywords"
-      content="interaction design, hardware design, software design, healthcare technology, product design, Teton, CIID, Central Saint Martins"
+      content="interaction design, hardware design, software design, head of design, healthcare technology, product design, Copenhagen, Teton, CIID, Central Saint Martins"
     />
     <meta name="author" content="Julius Ingemann Breitenstein" />
-    <link rel="canonical" href="https://juliusingemann.com" />
+    <link rel="canonical" href="https://www.juliusingemann.com/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://juliusingemann.com/" />
+    <meta property="og:url" content="https://www.juliusingemann.com/" />
     <meta
       property="og:title"
-      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer"
+      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer, Head of Design at Teton"
     />
     <meta
       property="og:description"
-      content="Portfolio of Julius Ingemann Breitenstein, a hardware and software interaction designer. Currently working at Teton, previously at CIID, and with experience in product design, healthcare technology, and creative technology."
+      content="Hardware and software interaction designer in Copenhagen, and Head of Design at Teton. Previously Sproute, the Unpaid Intern, CIID and Central Saint Martins."
     />
     <meta
       property="og:image"
-      content="https://juliusingemann.com/images/teton_ipad.webp"
+      content="https://www.juliusingemann.com/images/og/home.jpg"
     />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://juliusingemann.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.juliusingemann.com/" />
     <meta
-      property="twitter:title"
-      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer"
+      name="twitter:title"
+      content="Julius Ingemann Breitenstein - Hardware and Software Interaction Designer, Head of Design at Teton"
     />
     <meta
-      property="twitter:description"
-      content="Portfolio of Julius Ingemann Breitenstein, a hardware and software interaction designer. Currently working at Teton, previously at CIID, and with experience in product design, healthcare technology, and creative technology."
+      name="twitter:description"
+      content="Hardware and software interaction designer in Copenhagen, and Head of Design at Teton. Previously Sproute, the Unpaid Intern, CIID and Central Saint Martins."
     />
     <meta
-      property="twitter:image"
-      content="https://juliusingemann.com/images/teton_ipad.webp"
+      name="twitter:image"
+      content="https://www.juliusingemann.com/images/og/home.jpg"
     />
+
+    <!-- Structured data: ties the different spellings of the name to one person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Julius Ingemann Breitenstein",
+        "alternateName": ["Julius Breitenstein", "Julius Ingemann"],
+        "url": "https://www.juliusingemann.com/",
+        "jobTitle": "Head of Design",
+        "description": "Hardware and software interaction designer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Teton",
+          "url": "https://teton.ai"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Copenhagen",
+          "addressCountry": "DK"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Copenhagen Institute of Interaction Design"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Central Saint Martins"
+          }
+        ],
+        "knowsAbout": [
+          "Interaction design",
+          "Hardware design",
+          "Industrial design",
+          "Product design",
+          "Healthcare technology"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/juliusingemann/",
+          "https://x.com/Julius_Ingemann"
+        ]
+      }
+    </script>
 
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -127,6 +176,11 @@
 
       /* Animated underline effect is now in the external styles.css file */
 
+      /* Bullets for the homepage lists */
+      .bullets li::before {
+        content: "• ";
+      }
+
       .light-text {
         font-weight: 300;
       }
@@ -138,16 +192,17 @@
     </style>
   </head>
   <body
-    class="font-sans text-base max-w-2xl mx-auto px-8 py-12 md:py-24 font-light mb-64 md:mb-0"
+    class="font-sans text-base text-pretty max-w-2xl mx-auto px-8 py-12 md:py-24 font-light mb-64 md:mb-0"
   >
     <!-- Trigger line for mobile hover alternative -->
     <div id="trigger-line"></div>
 
     <div class="my-32 md:mb-0">
       <h1 class="text-2xl font-semibold">Julius Ingemann Breitenstein</h1>
-      <h2 class="text-lg italic text-gray-500">
-        Hardware and software interaction designer
-      </h2>
+      <p class="text-lg italic text-gray-500">
+        hardware and software interaction designer<br />
+        head of design at Teton · Copenhagen
+      </p>
     </div>
 
     <p class="mb-4 mt-8">
@@ -175,14 +230,16 @@
           alt="Teton iPad"
           class="hover-image hover-image-3"
         /> </span
-      >. Since then we've gone from pre-product, to being an essential tool for
-      carestaff across Europe, the UK, and the US.
+      >. Since then we've grown from 5 people to 100, and gone from pre-product
+      to being an essential tool for carestaff across Europe, the UK, and the
+      US.
     </p>
     <p class="mb-4">
       At Teton, we're teaching computers to understand human activity in
       healthcare spaces, and creating tools that give carestaff agency in their
-      work. As the only designer, I've designed everything from our digital
-      products and branding to our industrial and service design.
+      work. I started as the only designer, so I did the first version of
+      everything, from our digital products and branding to our industrial and
+      service design. Now there are three of us.
     </p>
 
     <p class="mb-12">
@@ -194,10 +251,35 @@
     </p>
 
     <div class="mb-12">
-      <p class="text-lg font-semibold">Previously:</p>
-      <div class="mb-8">
-        <p>
-          • Designed
+      <h2 class="text-lg font-semibold">Previously:</h2>
+      <ul class="mb-8 bullets">
+        <li>
+          Designed the
+          <span class="project-link">
+            <a
+              href="unpaid_intern.html"
+              class="text-lime-600 animated-underline"
+              >Unpaid Intern</a
+            >
+            <img
+              src="images/UnpaidIntern-Hardware.webp"
+              alt="Unpaid Intern Hardware"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/UnpaidIntern_evolution.webp"
+              alt="Unpaid Intern evolution"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/UnpaidIntern_In_use.webp"
+              alt="Unpaid Intern In use"
+              class="hover-image hover-image-3"
+            /> </span
+          >, an early generative AI synthesiser for designers
+        </li>
+        <li>
+          Designed
           <span class="project-link">
             <a href="sproute.html" class="text-lime-600 animated-underline"
               >Sproute</a
@@ -218,9 +300,9 @@
               class="hover-image hover-image-3"
             /> </span
           >, a navigation app that mixes Street Fighter and Google Maps
-        </p>
-        <p>
-          • Studied at
+        </li>
+        <li>
+          Studied at
           <span class="project-link"
             ><a
               href="https://ciid.dk"
@@ -245,9 +327,9 @@
               class="hover-image hover-image-3"
             />
           </span>
-        </p>
-        <p>
-          • Helped
+        </li>
+        <li>
+          Helped
           <span class="project-link">
             <a
               href="https://www.jakobwagner.dk/"
@@ -273,36 +355,10 @@
               class="hover-image hover-image-3"
             />
           </span>
-          design B&O headphones, furniture, and healthtech hardware.
-        </p>
-        <p>
-          • Designed the
-          <span class="project-link">
-            <a
-              href="unpaid_intern.html"
-              class="text-lime-600 animated-underline"
-              >Unpaid Intern</a
-            >
-            <img
-              src="images/UnpaidIntern-Hardware.webp"
-              alt="Unpaid Intern Hardware"
-              class="hover-image hover-image-1"
-            />
-            <img
-              src="images/UnpaidIntern_evolution.webp"
-              alt="Unpaid Intern evolution"
-              class="hover-image hover-image-2"
-            />
-            <img
-              src="images/UnpaidIntern_In_use.webp"
-              alt="Unpaid Intern In use"
-              class="hover-image hover-image-3"
-            />
-          </span>
-          a generative synthesiser for the industrial design process
-        </p>
-        <p>
-          • Studied product design at
+          design B&O headphones, furniture, and healthtech hardware
+        </li>
+        <li>
+          Studied product design at
           <span class="project-link">
             <a
               href="https://www.arts.ac.uk/colleges/central-saint-martins"
@@ -322,115 +378,116 @@
               class="hover-image hover-image-3"
             />
           </span>
-        </p>
-      </div>
+        </li>
+      </ul>
 
-      <p class="text-lg font-semibold">Some smaller things:</p>
+      <h2 class="text-lg font-semibold">Some smaller things:</h2>
 
-      <div class="mb-8">
-        • A 70's style
-        <span class="project-link"
-          ><a
-            href="letters_to_felix.html"
-            class="text-lime-600 animated-underline"
-            >TV program</a
-          >
-          <img
-            src="images/letters_to_felix_title.webp"
-            alt="Letters to Felix title"
-            class="hover-image hover-image-1"
-          />
-          <img
-            src="images/letters_to_felix_at_desk.webp"
-            alt="Letters to Felix at desk"
-            class="hover-image hover-image-2"
-          />
-          <img
-            src="images/letters_to_felix_BTS.webp"
-            alt="Letters to Felix behind the scenes"
-            class="hover-image hover-image-3"
-          />
-        </span>
-        about AR prototyping, made for a residency in Spokane
-        <br />
-        •
-        <a
-          href="https://x.com/Julius_Ingemann/status/1488986071031496708"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Experiments with</a
-        >
-        <a
-          href="https://x.com/Julius_Ingemann/status/1492994994520694788"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >consumer 3d</a
-        >
-        <a
-          href="https://www.teton.ai/technology"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >scanning</a
-        ><br />
-        •
-        <span class="project-link">
+      <ul class="mb-8 bullets">
+        <li>
+          A 70s style
+          <span class="project-link"
+            ><a
+              href="letters_to_felix.html"
+              class="text-lime-600 animated-underline"
+              >TV program</a
+            >
+            <img
+              src="images/letters_to_felix_title.webp"
+              alt="Letters to Felix title"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/letters_to_felix_at_desk.webp"
+              alt="Letters to Felix at desk"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/letters_to_felix_BTS.webp"
+              alt="Letters to Felix behind the scenes"
+              class="hover-image hover-image-3"
+            />
+          </span>
+          about AR prototyping, made for a residency in Spokane
+        </li>
+        <li>
           <a
-            href="https://gbg.florianporada.com/"
+            href="https://x.com/Julius_Ingemann/status/1488986071031496708"
             class="text-lime-600 animated-underline"
             target="_blank"
             rel="noopener noreferrer"
-            >Generative boardgames</a
+            >Experiments with</a
           >
-          <img
-            src="images/generative_boardgames_catalonia.webp"
-            alt="Generative boardgames"
-            class="hover-image hover-image-1"
-          />
-          <img
-            src="images/generative_boardgames_bird_bible.webp"
-            alt="Generative boardgames"
-            class="hover-image hover-image-2"
-          />
-          <img
-            src="images/generative_boardgames_taxReport.webp"
-            alt="Generative boardgames"
-            class="hover-image hover-image-3"
-          />
-        </span>
-        , made with friends, using finetuned GPT2 and StyleGAN
-        <br />
-        • Helping my friends build
-        <span class="project-link">
           <a
-            href="https://www.saga.dk/projects/lunark"
+            href="https://x.com/Julius_Ingemann/status/1492994994520694788"
             class="text-lime-600 animated-underline"
             target="_blank"
             rel="noopener noreferrer"
-            >LUNARK ↗︎</a
+            >consumer 3D</a
           >
-          <img
-            src="images/lunark_built.webp"
-            alt="LUNARK built"
-            class="hover-image hover-image-1"
-          />
-          <img
-            src="images/lunark_preassembly.webp"
-            alt="LUNARK preassembly"
-            class="hover-image hover-image-2"
-          />
-          <img
-            src="images/lunark_raining.webp"
-            alt="LUNARK raining"
-            class="hover-image hover-image-3"
-          />
-        </span>
-        , a moonbase they lived in in greenland
-
-        <p>
-          • Writing about design, technology, and art for
+          <a
+            href="https://www.teton.ai/technology"
+            class="text-lime-600 animated-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >scanning</a
+          >
+        </li>
+        <li>
+          <span class="project-link">
+            <a
+              href="https://gbg.florianporada.com/"
+              class="text-lime-600 animated-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Generative boardgames</a
+            >
+            <img
+              src="images/generative_boardgames_catalonia.webp"
+              alt="Generative boardgames"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/generative_boardgames_bird_bible.webp"
+              alt="Generative boardgames"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/generative_boardgames_taxReport.webp"
+              alt="Generative boardgames"
+              class="hover-image hover-image-3"
+            /> </span
+          >, made with friends, using finetuned GPT-2 and StyleGAN
+        </li>
+        <li>
+          Helping my friends build
+          <span class="project-link">
+            <a
+              href="https://www.saga.dk/projects/lunark"
+              class="text-lime-600 animated-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LUNARK ↗︎</a
+            >
+            <img
+              src="images/lunark_built.webp"
+              alt="LUNARK built"
+              class="hover-image hover-image-1"
+            />
+            <img
+              src="images/lunark_preassembly.webp"
+              alt="LUNARK preassembly"
+              class="hover-image hover-image-2"
+            />
+            <img
+              src="images/lunark_raining.webp"
+              alt="LUNARK raining"
+              class="hover-image hover-image-3"
+            /> </span
+          >, a moonbase they lived in in Greenland
+        </li>
+        <li>
+          Writing about design, technology, and art for
           <span class="project-link">
             <a
               href="https://www.iconeye.com/opinion/shirley-baker-women-children-and-loitering-men"
@@ -455,11 +512,11 @@
               class="hover-image hover-image-3"
             />
           </span>
-        </p>
-        <p>
-          • Ran a small internet radio station out of my bedroom as a teenager
-        </p>
-      </div>
+        </li>
+        <li>
+          Ran a small internet radio station out of my bedroom as a teenager
+        </li>
+      </ul>
 
       <!-- <div class="mb-8">
         <p class="text-lg font-semibold">Writing:</p>
@@ -476,44 +533,53 @@
         <a href="" class="text-lime-600 animated-underline">3D Scanning post</a>
       </div> -->
 
-      <div class="mb-8">
-        <p class="text-lg font-semibold">Media and Exhibits:</p>
-        •
-        <a
-          href="https://www.fastcompany.com/90547959/mobility-innovation-by-design-2020"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Winning 2020 Fast Co Design Awards ↗︎</a
-        ><br />
-        •
-        <a
-          href="https://interconnected.org/home/2020/09/07/algorithms"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Matt webb ↗︎</a
-        ><br />
-        •
-        <a
-          href="https://www.designboom.com/design/hello-robot-design-between-human-and-machine-vitra-design-museum-09-27-2022/"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Hello Robot Exhibition ↗︎</a
-        ><br />
-        •
-        <a
-          href="https://www.dezeen.com/2016/07/18/unpaid-intern-julius-breitenstein-central-saint-martins-graduate-device-aid-designers/"
-          class="text-lime-600 animated-underline"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Dezeen ↗︎</a
-        >
-      </div>
+      <h2 class="text-lg font-semibold">Media and Exhibits:</h2>
+      <ul class="mb-8 bullets">
+        <li>
+          Sproute won
+          <a
+            href="https://www.fastcompany.com/90547959/mobility-innovation-by-design-2020"
+            class="text-lime-600 animated-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Fast Co's 2020 Mobility Design Award ↗︎</a
+          >, beating Google
+        </li>
+        <li>
+          <a
+            href="https://interconnected.org/home/2020/09/07/algorithms"
+            class="text-lime-600 animated-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Matt Webb ↗︎</a
+          >
+          on my work turning algorithms into characters
+        </li>
+        <li>
+          Unpaid Intern toured 6 years in
+          <a
+            href="https://www.designboom.com/design/hello-robot-design-between-human-and-machine-vitra-design-museum-09-27-2022/"
+            class="text-lime-600 animated-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Hello, Robot ↗︎</a
+          >
+          (Vitra, MAK, Gent)
+        </li>
+        <li>
+          Unpaid Intern featured in
+          <a
+            href="https://www.dezeen.com/2016/07/18/unpaid-intern-julius-breitenstein-central-saint-martins-graduate-device-aid-designers/"
+            class="text-lime-600 animated-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Dezeen ↗︎</a
+          >
+        </li>
+      </ul>
 
       <div class="mb-12">
-        <p class="text-lg font-semibold">Contact:</p>
+        <h2 class="text-lg font-semibold">Contact:</h2>
         <p>
           <a
             href="mailto:julius.ingemann@gmail.com"
